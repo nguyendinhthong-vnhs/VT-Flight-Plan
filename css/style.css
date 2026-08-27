@@ -1,0 +1,184 @@
+        /*STARTUP SCREEN*/
+        #startupIcon,
+        #startupTitle,
+        #startupSubtitle,
+        #startupProgress,
+        #startupLoading {
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .startup-show {
+            opacity: 1 !important;
+            transform: translateY(0) scale(1) !important;
+        }
+
+        .startup-hidden {
+            opacity: 0 !important;
+            transform: translateY(-10px) scale(0.98);
+        }
+
+        #startupIcon {
+            transform: translateY(15px) scale(0.8);
+        }
+
+        #startupTitle {
+            transform: translateY(15px);
+        }
+
+        #startupSubtitle {
+            transform: translateY(15px);
+        }
+
+        #startupProgress,
+        #startupLoading {
+            transform: translateY(10px);
+        }
+
+        #startupScreen {
+            transition: opacity 0.8s ease;
+        }
+
+        #startupScreen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-mono-code {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Custom scrollbar for dark layout */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0284c7;
+        }
+
+        .fpl-paper {
+            background-color: #0d1527;
+            border-left: 4px solid #0284c7;
+        }
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+
+            .print-only {
+                display: block !important;
+            }
+
+            body {
+                background: white;
+                color: black;
+            }
+        }
+
+
+        /*MOBILE*/
+        @media (max-width: 768px) {
+            #flightMapPanel.map-expanded {
+                top: 8px;
+                right: 8px;
+                bottom: 8px;
+                left: 8px;
+                border-radius: 12px;
+            }
+        }
+
+        /* Khung chứa input + nút Clear */
+        .clearable-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        /* Chừa khoảng trống bên phải cho nút X */
+        .clearable-wrapper input {
+            padding-right: 40px !important;
+        }
+
+        /* Nút X */
+        .clear-input-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: transparent;
+            color: #94a3b8;
+            font-size: 20px;
+            line-height: 1;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.15s ease;
+        }
+
+        /* Hover */
+        .clear-input-btn:hover {
+            color: #f8fafc;
+            background: rgba(148, 163, 184, 0.15);
+        }
+
+        /* Khi input trống thì ẩn */
+        .clear-input-btn.hidden {
+            display: none;
+        }
+/* =========================================================
+   SETTINGS
+========================================================= */
+
+.settings-tab {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 12px;
+    margin-bottom: 4px;
+
+    border-radius: 10px;
+
+    color: #94a3b8;
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+
+    text-align: left;
+}
+
+.settings-tab:hover {
+    background: rgba(51, 65, 85, 0.6);
+    color: #e2e8f0;
+}
+
+.settings-tab.active {
+    background: rgba(14, 165, 233, 0.15);
+    color: #38bdf8;
+}
+
+.settings-tab i {
+    width: 16px;
+    text-align: center;
+}
